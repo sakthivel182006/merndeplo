@@ -29,10 +29,10 @@ const registerSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
-const RegisterModel = mongoose.model('registers', registerSchema);
+const RegisterModel = mongoose.model('Products', registerSchema);
 
 // POST route for registration
-app.post('/api/registers', async (req, res) => {
+app.post('/api/Products', async (req, res) => {
   const { name, email, password } = req.body;
 
   // Basic validation
@@ -72,6 +72,8 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
   });
 }
+
+
 
 // Start the server
 app.listen(port, () => {
