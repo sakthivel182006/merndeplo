@@ -35,7 +35,7 @@ const app=()=>{
 
     try {
       // Send form data to the backend API
-      const response = await fetch('http://localhost:5000/api/registers', {
+      const response = await fetch('http://localhost:5000/api/Products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
